@@ -14,106 +14,180 @@ class: center, middle, inverse, title-slide
 # Getting started with Git and GitHub
 ### Mark Hanly
 ### UNSW
-### 2019/03/07 (updated: 2022-05-18)
+### 2019/03/07 (updated: 2022-05-24)
 
 ---
 
-
-background-image: url(https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
-
+class: center, middle, inverse
 
 
-???
 
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+# The challenge
 
 
 ---
+class: left, top
 
-# Git? GitHub? GitWhat?
+# The challenge
 
-So what is Git and how is it different to GitHub?
+As data analysts, we produce a lot of files
+
+* code 
+* figures 
+* tables 
+* reports 
+
+Organising these files, and **keeping track of different versions** is an important, albeit often unglamorous, part of our job. 
+
+
+---
+class: center, middle, inverse
+
+# The old school solution
+
+
+---
+class: left, top
+
+# 🚲 The old school solution
+
+The old school solution combines many practical strategies:
+
+* Using file naming conventions to track different file versions 
+
+    * analysis-16jun20.do 
+    
+    * analysis-16jun20-mh.do 
+    
+    * analysis-final.do 
+    
+    * analysis-final-final.do
+
+
+* Use shared folders, google drive etc 
+
+* Share code and code snippets over email, slack etc 
+
+
+
+
+---
+class: center, middle, inverse
+
+# The new school solution
+
+---
+class: left, top
+
+# 🚀 The new school solution
+
+The new school solution is to use dedicated **version control software**. 
+
+There are a few options out there but by far the most popular choice is the combination of **Git** + **GitHub** <svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>. 
+
+--
 
 .pull-left[
 
 ![](https://git-scm.com/images/logos/2color-lightbg@2x.png)
 
-Git is software for tracking different versions of code files you are working on locally. 
+Git is software for tracking different versions of code files you are working on **locally**. 
 ]
 
 .pull-right[
 
 ![](https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo-700x394.png)
 
-Git Hub is a cloud-based platform for sharing and collaborating on projects managed with Git
+Git Hub is a **cloud-based** platform for sharing and collaborating on projects managed with Git
 ]
 
+---
+class: center, inverse
+
+# How does it work?
+
+![](images/commit.gif)
+
+---
+class: center, inverse
+
+# How does it work?
+
+![](images/commit-gif-end.png)
+
+
+---
+class: center, inverse
+
+# How does it work?
+
+![](images/push.gif)
+
+---
+class: center, inverse
+
+# How does it work?
+
+![](images/push-gif-end.png)
+
+
+
+---
+class: middle, center, inverse
+
+# It seems a bit complicated
+
+![via giphy.com](https://media.giphy.com/media/kaq6GnxDlJaBq/giphy.gif)
+
+_Is it worth it?_
 
 ---
 class: left, top, inverse
 
-# Why use Git and GitHub?
+# Yes!! It is definitely worth it! 
 
-![via giphy.com](https://media.giphy.com/media/0Vv0Ne2CnOClIExIuL/giphy.gif)
+1. Version control 
 
+1. Collaboration
 
----
-class: left, top, inverse
+1. Organisation 
 
-# Why use Git and GitHub?
+1. Automatic web presence 
 
-### 1. Version control 
+1. Great for teaching
 
-### 2. Collaboration
+1. Powerful search
 
-### 3. Organisation 
+1. Issue tracking
+
+1. It is all _free_
 
 --
 
-All of these promote **_reproducibility_** 🎈 and **_transparency_** 🕺
-
+All of these promote **reproducibility** 🎈 and **transparency** 🌠
 
 ---
 class: left, top
 
-# Why use Git and GitHub?
+# Let's check out an example
 
 .left-column[
 
-### 1. Version control
+If reading this at home explore the repo for: 
 
-Keep a log of changes to your code
+[Commit history](https://github.com/CBDRH/vaccineQueueNetworks/commits/main)
 
-Explore this example [here](https://github.com/CBDRH/vaccineQueue/commits/main)
+[Branches](https://github.com/CBDRH/vaccineQueueNetworks/network)
+
+[Version comparison](https://github.com/CBDRH/vaccineQueueNetworks/commit/c0c56a376555b127279e5e0d9786b93b073f9dc7)
 
 ]
 
 .right-column[
 
-![Test text](images/commit-log-example.png)
+[![Test text](images/vax-homepage.png)](https://github.com/CBDRH/vaccineQueueNetworks)
 
-]
-
-
-
----
-class: left, top
-
-# Why use Git and GitHub?
-
-.left-column[
-
-### 1. Version control 
-
-Easily search, navigate and compare this history
-
-Explore this example [here](https://github.com/CBDRH/vaccineQueue/commits/main)
-
-]
-
-.right-column[
-
-![Test text](images/commit-example.png)
+https://github.com/CBDRH/vaccineQueueNetworks
 
 ]
 
@@ -121,15 +195,13 @@ Explore this example [here](https://github.com/CBDRH/vaccineQueue/commits/main)
 ---
 class: left, top
 
-# Why use Git and GitHub?
+# Let's check out an example
 
 .left-column[
-
-### 1. Version control 
 
 You can even compare difference versions of images! 
 
-* This works for PNG, JPG, GIF, and PSD
+This works for PNG, JPG, GIF, and PSD
 
 You can try this example [here](https://github.com/MarkHanly/getting-started-with-git-and-github/commit/6a071a9c63ee211e63417efba10a24042d0b0db3)
 
@@ -142,73 +214,44 @@ You can try this example [here](https://github.com/MarkHanly/getting-started-wit
 ]
 
 
+---
+class: middle, center, inverse
+
+# Are you in!?
+
+![via giphy.com](https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif)
+
+
+
+---
+class: center, middle, inverse
+
+# Interfacing with Git
 
 
 ---
 class: left, top
 
-# Why use Git and GitHub?
+# Working locally: **Git client**
 
-.left-column[
-
-### 2. Collaborate 
-
-GitHub offers powerful collaboration features
-
-]
-
-.right-column[
-
-&lt;img src=https://media.giphy.com/media/1MayKbFuSKE1O/giphy.gif width=80% height=80%&gt;
-
-]
+To use Git on your computer you need a _Git Client_
 
 
+.pull-left[
 
----
-class: left, top
+### Command line 
 
-# Why use Git and GitHub?
+* Terminal (Mac)
 
-.left-column[
-
-### 2. Collaborate 
-
-Edit code simultaneously 
-
-(Here, three people are panicking before a deadline)
-
-Explore this example [here](https://github.com/CBDRH/covoid/commits/master)
-]
-
-.right-column[
-
-![](images/collaboration-example.png)
+* Git bash (Windows)
 
 ]
 
+.pull-right[
 
 
----
-class: left, top
 
-# Why use Git and GitHub?
-
-.left-column[
-
-### 2. Collaborate 
-
-Built-in issue tracking
-
-* Assign a user 
-* Link to the code 
-
-Explore this example [here](https://github.com/CBDRH/covoid/issues/20)
-]
-
-.right-column[
-
-![](images/issues-example.png)
+![From https://gitforwindows.org/](https://gitforwindows.org/img/gw1.png)
 
 ]
 
@@ -216,24 +259,49 @@ Explore this example [here](https://github.com/CBDRH/covoid/issues/20)
 ---
 class: left, top
 
-# Why use Git and GitHub?
+# Working locally: **Git client**
 
-.left-column[
-
-### 2. Collaborate 
-
-Branching  
-
-* Develop new ideas in separate branches 
-* When you're ready, merge into the code base
+To use Git on your computer you need a _Git Client_
 
 
-Explore this example [here](https://github.com/CBDRH/covoid/network)
+.pull-left[
+
+### R Studio interface
+
+* R users should check out [happygitwithr.com](https://happygitwithr.com/)
+
 ]
 
-.right-column[
+.pull-right[
 
-![](images/branching-example.png)
+
+
+![](images/rstudio-pane.png)
+
+]
+
+
+---
+class: left, top
+
+# Working locally: **Git client**
+
+To use Git on your computer you need a _Git Client_
+
+
+.pull-left[
+
+### Tortoise Git
+
+* Windows integration to file explorer 
+
+* https://tortoisegit.org/ 
+
+]
+
+.pull-right[
+
+![](images/tortoise-git.png)
 
 ]
 
@@ -242,26 +310,22 @@ Explore this example [here](https://github.com/CBDRH/covoid/network)
 ---
 class: left, top
 
-# Why use Git and GitHub?
+# Collaboration: **Git hosting service**
+
+To enable collaboration you need a _Git Hosting service_. There are heaps of [options](https://git.wiki.kernel.org/index.php/GitHosting) with different pros and cons, but the core functionality is usually the same.  
+
 
 .left-column[
 
-### 3. Organise
+### GitHub
 
-Everything gets stored together 
-
-* Data 
-* Code 
-* Figures 
-* Articles
-
-Explore this example [here](https://github.com/CBDRH/vaccineQueue)
+Probably the most popular hosting service so there are lots of tutorials and resources available online. 
 
 ]
 
 .right-column[
 
-![](images/org-example.png)
+![](https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png)
 
 ]
 
@@ -269,25 +333,21 @@ Explore this example [here](https://github.com/CBDRH/vaccineQueue)
 ---
 class: left, top
 
-# Why use Git and GitHub?
+# Collaboration: **Git hosting service**
+
+To enable collaboration you need a _Git Hosting service_. There are heaps of [options](https://git.wiki.kernel.org/index.php/GitHosting) with different pros and cons, but the core functionality is usually the same.   
 
 .left-column[
 
-### 3. Organise
+### Gitea 
 
-Easy web presence 
-
-* github.com 
-* blogs 
-* These slides!
-
-Explore this example [here](https://github.com/CBDRH/vaccineQueue)
+A light-weight easy to install option. Implemented in ERICA. 
 
 ]
 
 .right-column[
 
-![](images/web-example.png)
+![](https://www.vectorlogo.zone/logos/giteaio/giteaio-ar21.png)
 
 ]
 
@@ -295,19 +355,21 @@ Explore this example [here](https://github.com/CBDRH/vaccineQueue)
 ---
 class: left, top
 
-# Why use Git and GitHub?
+# Collaboration: **Git hosting service**
+
+To enable collaboration you need a _Git Hosting service_. There are heaps of [options](https://git.wiki.kernel.org/index.php/GitHosting) with different pros and cons, but the core functionality is usually the same.  
 
 .left-column[
 
-### 3. Organise
+### GitLab
 
-[Bryan 2018](https://doi.org/10.1080/00031305.2017.1399928)
+Can be hosted on private server so ideal for sensitive projects. Implemented in SURE. 
 
 ]
 
 .right-column[
 
-&gt; A GitHub-synced Git repo can simultaneously be the code-heavy back end of a project and an outward-facing front end.
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/GitLab_logo.svg/1024px-GitLab_logo.svg.png)
 
 ]
 
@@ -321,7 +383,7 @@ class: center, middle, inverse
 ---
 class: left, top
 
-# Repo 
+# Key concept: Repository 
 
 .pull-left[
 
@@ -331,34 +393,389 @@ class: left, top
 
 .pull-right[
 
-## A repository is where the magic happens 🧙‍♂️
+### A repository is where the magic happens 🧙‍♂️
 
 * Referred to as a repo 
-* Database of _diffs_
-* Hidden folder on your system
+* Database of changes to your code (aka _diffs_)
+* Hidden folder on your system named **.git**
+
+Once you initialise a git repo in a folder, git is ready to start tracking changes to all the files and subfolders therein. 
 
 ]
 
 
 
+---
+class: left, top
+
+# Key concept: Diff 
+
+.pull-left[
+
+![](images/commit-example.png)
+
+]
+
+.pull-right[
+
+### Diff
+
+* A diff is the set of changes between two versions of a file 
+
+* The screenshot highlights a single diff: deletion of the word "clinic" 
+
+]
 
 
+---
+class: left, top
+
+# Key concept: Commit 
+
+.pull-left[
+
+![](images/commit-diagram.png)
+
+]
+
+.pull-right[
+
+### Commit
+
+* A Commit is like clicking save in a MS Word document 
+
+* It saves a snapshot of the code at that point in time 
+
+* Each commit has a message explaining what changed
+
+]
 
 
+---
+class: center, middle, inverse
 
+# Workflow
+
+
+---
+class: center, top, inverse
+
+# Workflow
+
+![](images/workflow.gif)
+
+---
+class: center, top, inverse
+
+# Workflow
+
+![](images/workflow-gif-end.png)
+
+
+---
+class: center, top
+
+# Workflow
+
+How you actual perform these commands depends on the git client you are using...
+
+.pull-left[
+![From https://gitforwindows.org/](https://gitforwindows.org/img/gw1.png)
+]
+
+.pull-right[
+![](images/tortoise-git.png)
+]
+
+
+For today's exercises we will be using _the scary black box_.
+
+---
+class: center, middle, inverse
+
+# Frequently asked questions 
+
+---
+class: left, top
+
+# Frequently asked questions 
+
+## What files can I track? 
+
+--
+
+This all works best for non-binary or text files e.g. your typical code files (.sas, .do, .R, .Rmd, .py) but also .png, .csv etc
+
+You can include non-binary files (.pdf, .docx, .xlsx etc) in a git repo but the diff features won't work. It can still be useful if using the repo as a central orgnaisation point (e.g. if you save your published manuscript with the analysis code). 
+
+
+---
+class: left, top
+
+# Frequently asked questions 
+
+## How often should I commit? 
+
+--
+
+Well, it depends. Just like when you start writing a word document you might not click save very often as you spew out lots of ideas, but at the end of your thesis you will carefully save evey change! 
+
+It is best practice to keep commits fairly small and related, especially for mature projects. 
+
+
+---
+class: left, top
+
+# Frequently asked questions 
+
+## What about my sensitive data/code? 
+
+--
+
+If your data are sensitive be very careful not to track with Git (more tips on this later). 
+
+Private repos are available if you don't want the public to see your code (you can change to public later if desired.)
+
+---
+class: left, top
+
+# Frequently asked questions 
+
+## How does my repo line up with my project folder?
+
+--
+
+Just like when you create project folders and sub-folders you need to put some thought into how to organise your repos.
+
+One option is to initiate the repo in the root folder of the project, meaning that all files and subfolders are tracked by default. 
+
+An alternative would be to initiate the repo in a specific folder, e.g. your `Code` folder, and keep your data in a separate `Data` folder.
+
+In either approach you can specify any files or folders that Git should ignore in a special file named `.gitignore`. 
 
 ---
 class: center, middle
 
-# Examples of Git Clients
+# Any other questions? 
 
-## Git Bash
+![](https://media4.giphy.com/media/3oxRmsoHngzymwDl2E/giphy.gif?cid=790b7611f45362f04723bb7e24e142fc9f8342e1cc63a978&amp;rid=giphy.gif&amp;ct=g)
 
-![gitforwindows.org](https://gitforwindows.org/img/gw1.png)
 
-class: center, middle
+---
+class: center, middle, inverse
 
-# Thanks!
+# Exercises
+
+---
+class: left, top
+
+# Exercise 1 of 7 🏋
+
+### Practice using the shell
+
+.left-column[
+
+### Task 
+Create a new folder and empty text file using GitBash (Windows) or Terminal (Mac)
+
+**Note** Ctrl+V doesn’t work in GitBash, right-click instead. You may need to adjust the settings.
+
+]
+
+.right-column[
+
+1. Open GitBash/Terminal
+
+1. Use the `cd` command to navigate to the location you want to create your new folder
+
+1. Use the `mkdir` command to create a new folder named GitDemo. Enter &lt;span style="font: Courier; color: #F82472;"&gt; mkdir GitDemo&lt;/span&gt;
+
+1. Use the `cd` command again to change directory to the new folder. Enter &lt;span style="font: Courier; color: #F82472;"&gt; cd GitDemo&lt;/span&gt;
+
+1. Use the `touch` command to create a new text file named method.txt. Enter &lt;span style="font: Courier; color: #F82472;"&gt; touch method.txt&lt;/span&gt;
+
+1. Practice the commands `ls` (list) and `pwd` (print working directory)
+
+]
+
+
+---
+class: left, top
+
+# Exercise 2 of 7 🏋🏋
+
+### Configure git
+
+.left-column[
+
+### Task 
+Configure Git with your username and email
+]
+
+.right-column[
+
+Using GitBash or Terminal, configure Git with your username and email by entering the commands below:
+
+1. &lt;span style="font: Courier; color: #F82472;"&gt;git config --global user.name "John Doe”&lt;/span&gt;
+
+1. &lt;span style="font: Courier; color: #F82472;"&gt;git config --global user.email johndoe@example.com
+&lt;/span&gt;
+
+To check it has worked you can enter &lt;span style="font: Courier; color: #F82472;"&gt;git config --list
+&lt;/span&gt; and you should see your user name and email listed among your configuration settings. 
+
+]
+
+
+---
+class: left, top
+
+# Exercise 3 of 7 🏋🏋🏋
+
+### Configure git
+
+.left-column[
+
+### Task 
+Initialise a git repo then add and commit changes to your file
+]
+
+.right-column[
+
+1. Make sure you are in your new folder: &lt;span style="font: Courier; color: #F82472;"&gt;cd GitDemo&lt;/span&gt;
+
+1. Initialise a git repo: &lt;span style="font: Courier; color: #F82472;"&gt;git init&lt;/span&gt;
+
+1. Check the status of your repo: &lt;span style="font: Courier; color: #F82472;"&gt;git status&lt;/span&gt; (You should see that method.txt is untracked)
+
+1. Open method.txt with your preferred text editor &amp; write a short list or recipe. After each item:
+
+    1. Save the file as you usually would
+
+    1. Stage the file: &lt;span style="font: Courier; color: #F82472;"&gt;git add -A&lt;/span&gt;
+
+    1. Commit the file: &lt;span style="font: Courier; color: #F82472;"&gt;git commit -m “your message here”&lt;/span&gt;
+
+1. Enter &lt;span style="font: Courier; color: #F82472;"&gt;git log&lt;/span&gt; to view a log of your changes
+
+]
+
+---
+class: left, top
+
+# Exercise 4 of 7 🏋🏋🏋🏋
+
+### Sync Git and GitHub
+
+.left-column[
+
+### Task 
+Create a personal access token (PAT) on GitHub and use it to authenticate your account. 
+]
+
+.right-column[
+
+Follow steps 1-9 on **Creating a personal access token** here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+]
+
+---
+class: left, top
+
+# Exercise 5 of 7 🏋🏋🏋🏋🏋
+
+### Host your repo on GitHub
+
+.left-column[
+
+### Task 
+Push your local git repo to a GitHub repo
+]
+
+.right-column[
+
+1. Create a new public repo in GitHub (use + button in top right-hand corner)
+
+1. Name it something unique or give it the same name as your project folder.
+
+1. No need to initialize a README, add a .gitignore or license
+
+1. When you are ready select **Create Repository**
+
+1. Follow the instructions to push an existing repository from the command line (copy code into GitBash/Terminal)
+You should now be able to explore your history on GitHub
+
+]
+
+---
+class: left, top
+
+# Exercise 6 of 7 🏋🏋🏋🏋🏋🏋
+
+### Clone a remote repo
+
+.left-column[
+
+### Task 
+Go to partners GitHub repo, copy URL, then clone
+]
+
+.right-column[
+
+Pair up and complete these in tandem with your partner.
+
+1. Add your partner as a collaborator in your new GitHub repo (Settings &gt; Manage Access &gt; Invite a collaborator)
+
+1. Go to your partner’s GitHub repo and click on the clone link to get the HTTP url
+
+1. Using GitBash/Terminal, use `cd` to navigate to a location you want to clone your partners repo (This will create a local copy of their repo. Don’t clone it into your own repo!)
+
+1. Enter `git clone &lt;your partners url&gt;` to clone their repo: for example:
+	&lt;span style="font: Courier; color: #F82472;"&gt;git clone https://github.com/MarkHanly/GitPrax.git&lt;/span&gt;
+
+]
+
+
+---
+class: left, top
+
+# Exercise 7 of 7 🏋🏋🏋🏋🏋🏋🏋
+
+### Collaborate
+
+.left-column[
+
+### Task 
+Make changes to your partners file and push. Pull your partners changes
+]
+
+.right-column[
+
+Pair up and complete these in tandem with your partner.
+
+1. Open your partner’s methods.txt file using your preferred text editor
+1. Edit their list and save the file
+1. Use &lt;span style="font: Courier; color: #F82472;"&gt;cd&lt;/span&gt; to navigate inside your locally cloned copy of your partner’s repo
+1. Use &lt;span style="font: Courier; color: #F82472;"&gt;git status&lt;/span&gt; to confirm you have edited the file
+1. Use &lt;span style="font: Courier; color: #F82472;"&gt;git add -A&lt;/span&gt; and &lt;span style="font: Courier; color: #F82472;"&gt;git commit -m “message”&lt;/span&gt; as before to add and commit changes
+1. Use &lt;span style="font: Courier; color: #F82472;"&gt;git push&lt;/span&gt; to push your local changes to your partner’s GitHub repo
+1. Use &lt;span style="font: Courier; color: #F82472;"&gt;cd&lt;/span&gt; to navigate back to your own repo
+1. Use &lt;span style="font: Courier; color: #F82472;"&gt;git pull&lt;/span&gt; to sync in your partner’s changes
+
+]
+
+
+---
+class: center, top 
+
+# References and resources
+
+---
+class: center, middle, inverse
+
+# Thank you for taking part!
+
+If this was useful for you, or if you have any questions or suggestions, please let me know at [m.hanly@unsw.edu.au](mailto:m.hanly@unsw.edu.au) 😄
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
     </textarea>
