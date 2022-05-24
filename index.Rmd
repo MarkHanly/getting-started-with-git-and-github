@@ -328,21 +328,19 @@ To use Git on your computer you need a _Git Client_. There are [heaps](https://g
 
 .pull-left[
 
-### 3. SAS Enterprise Guide interface
+### 3. SAS Enterprise Guide 8 interface
 
 * For SAS users!
 
-* [Git’r’done: Using Git in the Production SAS® Environment by
-Joe Matise](https://www.lexjansen.com/wuss/2019/114_Final_Paper_PDF.pdf)
+* [Understanding Git Integration in SAS Enterprise Guide](https://documentation.sas.com/doc/en/egcdc/8.2/egdoccdc/egug/p1ov5qodzk4ur2n1r200wdr5jz75.htm)
 
-* [Using built-in Git operations in SAS](https://blogs.sas.com/content/sasdummy/2019/01/17/git-in-sas/) SAS blogpost
+* Similar integration in SAS Studio
+
 ]
 
 .pull-right[
 
-
-
-![From blogs.sas.com](https://blogs.sas.com/content/sasdummy/files/2017/08/proghistory.png)
+![From documnetation.sas.com](https://documentation.sas.com/api/docsets/egug/8.2/content/images/git_repositorytab.png)
 
 ]
 
@@ -898,7 +896,7 @@ class: left, top
 
 * [Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jennifer Bryan
 
-* [Using built-in Git operations in SAS](https://blogs.sas.com/content/sasdummy/2019/01/17/git-in-sas/) SAS blogpost
+* [Understanding Git Integration in SAS Enterprise Guide](https://documentation.sas.com/doc/en/egcdc/8.2/egdoccdc/egug/p1ov5qodzk4ur2n1r200wdr5jz75.htm) SAS documentation
 
 * [Stata and GitHub Integration](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a) A medium.com blogpost by Asjad Naqvi
 
