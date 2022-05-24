@@ -37,7 +37,15 @@ As data analysts, we produce a lot of files
 * tables 
 * reports 
 
-Organising these files, and **keeping track of different versions** is an important, albeit often unglamorous, part of our job. 
+Organising these files is an important, albeit often unglamorous, part of our job.  
+
+--
+
+**Managing versions** What do you do with old code? 
+
+**Ensuring reproducibility** Can others reproduce your results? What about your future self? 
+
+**Facilitating collaboration** Can other team members easily contribute?
 
 
 ---
@@ -56,17 +64,21 @@ The old school solution combines many practical strategies:
 * Using file naming conventions to track different file versions 
 
     * analysis-16jun20.do 
-    
     * analysis-16jun20-mh.do 
-    
     * analysis-final.do 
-    
     * analysis-final-final.do
 
+* Note changes directly in code comments or separate documentation
 
 * Use shared folders, google drive etc 
 
 * Share code and code snippets over email, slack etc 
+
+--
+
+This is ok(ish) for one person working on a small, brief project.
+
+But if the project is **large**, involves **many people** or goes on for a **long time** this approach very quickly breaks down 😟
 
 
 
@@ -106,12 +118,16 @@ class: center, inverse
 
 # How does it work?
 
+### Committing, branching and merging with Git
+
 ![](images/commit.gif)
 
 ---
 class: center, inverse
 
 # How does it work?
+
+### Committing, branching and merging with Git
 
 ![](images/commit-gif-end.png)
 
@@ -121,12 +137,16 @@ class: center, inverse
 
 # How does it work?
 
+### Sharing versions with GitHub
+
 ![](images/push.gif)
 
 ---
 class: center, inverse
 
 # How does it work?
+
+### Sharing versions with GitHub
 
 ![](images/push-gif-end.png)
 
@@ -146,25 +166,38 @@ class: left, top, inverse
 
 # Yes!! It is definitely worth it! 
 
-1. Version control 
+--
 
-1. Collaboration
-
-1. Organisation 
-
-1. Automatic web presence 
-
-1. Great for teaching
-
-1. Powerful search
-
-1. Issue tracking
-
-1. It is all _free_
+**1. Version control** | Essential for reproducibility
 
 --
 
-All of these promote **reproducibility** 🎈 and **transparency** 🌠
+**2. Collaboration** | [OpenSAFELY](https://github.com/opensafely), [OHDSI](https://github.com/OHDSI/Atlas), [R package development](https://github.com/tidyverse/tidyverse)
+
+--
+
+**3. Organisation** | e.g. Code, data &amp; outputs all stored together
+
+--
+
+**4. Easy web presence** | e.g. any public GitHub repo; these slides! 
+
+--
+
+**5. Great for teaching** 
+
+--
+
+**6. Powerful search** 
+
+--
+
+**7. Issue tracking** | Hyperlink the bug, discussion about the bug &amp; the solution!
+
+--
+
+**8. It is all _free*_** | *Well, mostly. The free products will cover most academic/research use cases. 
+
 
 ---
 class: left, top
@@ -234,22 +267,28 @@ class: left, top
 
 # Working locally: **Git client**
 
-To use Git on your computer you need a _Git Client_
+To use Git on your computer you need a _Git Client_. There are [heaps](https://git-scm.com/downloads/guis) of git clients available, with different pros and cons. Here are a few examples:
 
 
 .pull-left[
 
-### Command line 
+### 1. Command line 
 
 * Terminal (Mac)
 
 * Git bash (Windows)
 
+* PowerShell (Windows)
+
+### Downloads these from:
+
+[git website](https://git-scm.com/download/) 
+
+[git for windows](https://gitforwindows.org/)
+
 ]
 
 .pull-right[
-
-
 
 ![From https://gitforwindows.org/](https://gitforwindows.org/img/gw1.png)
 
@@ -261,14 +300,16 @@ class: left, top
 
 # Working locally: **Git client**
 
-To use Git on your computer you need a _Git Client_
+To use Git on your computer you need a _Git Client_. There are [heaps](https://git-scm.com/downloads/guis) of git clients available, with different pros and cons. Here are a few examples:
 
 
 .pull-left[
 
-### R Studio interface
+### 2. R Studio interface
 
-* R users should check out [happygitwithr.com](https://happygitwithr.com/)
+* For R users!
+
+* Check out [happygitwithr.com](https://happygitwithr.com/)
 
 ]
 
@@ -286,14 +327,45 @@ class: left, top
 
 # Working locally: **Git client**
 
-To use Git on your computer you need a _Git Client_
+To use Git on your computer you need a _Git Client_. There are [heaps](https://git-scm.com/downloads/guis) of git clients available, with different pros and cons. Here are a few examples:
 
 
 .pull-left[
 
-### Tortoise Git
+### 3. SAS Enterprise Guide interface
+
+* For SAS users!
+
+* [Git’r’done: Using Git in the Production SAS® Environment by
+Joe Matise](https://www.lexjansen.com/wuss/2019/114_Final_Paper_PDF.pdf)
+
+* [Using built-in Git operations in SAS](https://blogs.sas.com/content/sasdummy/2019/01/17/git-in-sas/) SAS blogpost
+]
+
+.pull-right[
+
+
+
+![From blogs.sas.com](https://blogs.sas.com/content/sasdummy/files/2017/08/proghistory.png)
+
+]
+
+
+---
+class: left, top
+
+# Working locally: **Git client**
+
+To use Git on your computer you need a _Git Client_. There are [heaps](https://git-scm.com/downloads/guis) of git clients available, with different pros and cons. Here are a few examples:
+
+
+.pull-left[
+
+### 4. Tortoise Git
 
 * Windows integration to file explorer 
+
+* If you want to point and click
 
 * https://tortoisegit.org/ 
 
@@ -422,6 +494,8 @@ class: left, top
 
 * A diff is the set of changes between two versions of a file 
 
+* When you commit, it is the _diff_ that gets recorded, not the whole version
+
 * The screenshot highlights a single diff: deletion of the word "clinic" 
 
 ]
@@ -446,7 +520,9 @@ class: left, top
 
 * It saves a snapshot of the code at that point in time 
 
-* Each commit has a message explaining what changed
+* Why you commit you must write a message explaining what changed
+
+* Committing is a two stage process - more on this later
 
 ]
 
@@ -500,7 +576,7 @@ class: left, top
 
 # Frequently asked questions 
 
-## What files can I track? 
+### What files can I track? 
 
 --
 
@@ -514,11 +590,13 @@ class: left, top
 
 # Frequently asked questions 
 
-## How often should I commit? 
+### How often should I commit? 
 
 --
 
-Well, it depends. Just like when you start writing a word document you might not click save very often as you spew out lots of ideas, but at the end of your thesis you will carefully save evey change! 
+Well, it depends.
+
+Just like when you start writing a word document you might not click save very often as you spew out lots of ideas, but at the end of your thesis you will carefully save evey change! 
 
 It is best practice to keep commits fairly small and related, especially for mature projects. 
 
@@ -528,7 +606,25 @@ class: left, top
 
 # Frequently asked questions 
 
-## What about my sensitive data/code? 
+### What's with the staging area? 
+
+--
+
+There are advantages of breaking up the commit into two steps 
+
+* You can split a big edit into bite-sized pieces 
+
+* Easier to review
+
+* If you make a mistake you can _unstage_. You can't un-commit!
+
+
+---
+class: left, top
+
+# Frequently asked questions 
+
+### What about my sensitive data/code? 
 
 --
 
@@ -541,7 +637,7 @@ class: left, top
 
 # Frequently asked questions 
 
-## How does my repo line up with my project folder?
+### How does my repo align with my project folder?
 
 --
 
@@ -588,11 +684,11 @@ Create a new folder and empty text file using GitBash (Windows) or Terminal (Mac
 
 1. Use the `cd` command to navigate to the location you want to create your new folder
 
-1. Use the `mkdir` command to create a new folder named GitDemo. Enter &lt;span style="font: Courier; color: #F82472;"&gt; mkdir GitDemo&lt;/span&gt;
+1. Use the `mkdir` command to create a new folder named GitDemo. Enter &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt; mkdir GitDemo&lt;/span&gt;
 
-1. Use the `cd` command again to change directory to the new folder. Enter &lt;span style="font: Courier; color: #F82472;"&gt; cd GitDemo&lt;/span&gt;
+1. Use the `cd` command again to change directory to the new folder. Enter &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt; cd GitDemo&lt;/span&gt;
 
-1. Use the `touch` command to create a new text file named method.txt. Enter &lt;span style="font: Courier; color: #F82472;"&gt; touch method.txt&lt;/span&gt;
+1. Use the `touch` command to create a new text file named method.txt. Enter &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt; touch method.txt&lt;/span&gt;
 
 1. Practice the commands `ls` (list) and `pwd` (print working directory)
 
@@ -616,12 +712,12 @@ Configure Git with your username and email
 
 Using GitBash or Terminal, configure Git with your username and email by entering the commands below:
 
-1. &lt;span style="font: Courier; color: #F82472;"&gt;git config --global user.name "John Doe”&lt;/span&gt;
+1. &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git config --global user.name "John Doe”&lt;/span&gt;
 
-1. &lt;span style="font: Courier; color: #F82472;"&gt;git config --global user.email johndoe@example.com
+1. &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git config --global user.email johndoe@example.com
 &lt;/span&gt;
 
-To check it has worked you can enter &lt;span style="font: Courier; color: #F82472;"&gt;git config --list
+To check it has worked you can enter &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git config --list
 &lt;/span&gt; and you should see your user name and email listed among your configuration settings. 
 
 ]
@@ -642,21 +738,21 @@ Initialise a git repo then add and commit changes to your file
 
 .right-column[
 
-1. Make sure you are in your new folder: &lt;span style="font: Courier; color: #F82472;"&gt;cd GitDemo&lt;/span&gt;
+1. Make sure you are in your new folder: &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;cd GitDemo&lt;/span&gt;
 
-1. Initialise a git repo: &lt;span style="font: Courier; color: #F82472;"&gt;git init&lt;/span&gt;
+1. Initialise a git repo: &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git init&lt;/span&gt;
 
-1. Check the status of your repo: &lt;span style="font: Courier; color: #F82472;"&gt;git status&lt;/span&gt; (You should see that method.txt is untracked)
+1. Check the status of your repo: &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git status&lt;/span&gt; (You should see that method.txt is untracked)
 
 1. Open method.txt with your preferred text editor &amp; write a short list or recipe. After each item:
 
     1. Save the file as you usually would
 
-    1. Stage the file: &lt;span style="font: Courier; color: #F82472;"&gt;git add -A&lt;/span&gt;
+    1. Stage the file: &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git add -A&lt;/span&gt;
 
-    1. Commit the file: &lt;span style="font: Courier; color: #F82472;"&gt;git commit -m “your message here”&lt;/span&gt;
+    1. Commit the file: &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git commit -m “your message here”&lt;/span&gt;
 
-1. Enter &lt;span style="font: Courier; color: #F82472;"&gt;git log&lt;/span&gt; to view a log of your changes
+1. Enter &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git log&lt;/span&gt; to view a log of your changes
 
 ]
 
@@ -731,7 +827,7 @@ Pair up and complete these in tandem with your partner.
 1. Using GitBash/Terminal, use `cd` to navigate to a location you want to clone your partners repo (This will create a local copy of their repo. Don’t clone it into your own repo!)
 
 1. Enter `git clone &lt;your partners url&gt;` to clone their repo: for example:
-	&lt;span style="font: Courier; color: #F82472;"&gt;git clone https://github.com/MarkHanly/GitPrax.git&lt;/span&gt;
+	&lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git clone https://github.com/MarkHanly/GitPrax.git&lt;/span&gt;
 
 ]
 
@@ -755,39 +851,79 @@ Pair up and complete these in tandem with your partner.
 
 1. Open your partner’s methods.txt file using your preferred text editor
 1. Edit their list and save the file
-1. Use &lt;span style="font: Courier; color: #F82472;"&gt;cd&lt;/span&gt; to navigate inside your locally cloned copy of your partner’s repo
-1. Use &lt;span style="font: Courier; color: #F82472;"&gt;git status&lt;/span&gt; to confirm you have edited the file
-1. Use &lt;span style="font: Courier; color: #F82472;"&gt;git add -A&lt;/span&gt; and &lt;span style="font: Courier; color: #F82472;"&gt;git commit -m “message”&lt;/span&gt; as before to add and commit changes
-1. Use &lt;span style="font: Courier; color: #F82472;"&gt;git push&lt;/span&gt; to push your local changes to your partner’s GitHub repo
-1. Use &lt;span style="font: Courier; color: #F82472;"&gt;cd&lt;/span&gt; to navigate back to your own repo
-1. Use &lt;span style="font: Courier; color: #F82472;"&gt;git pull&lt;/span&gt; to sync in your partner’s changes
+1. Use &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;cd&lt;/span&gt; to navigate inside your locally cloned copy of your partner’s repo
+1. Use &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git status&lt;/span&gt; to confirm you have edited the file
+1. Use &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git add -A&lt;/span&gt; and &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git commit -m “message”&lt;/span&gt; as before to add and commit changes
+1. Use &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git push&lt;/span&gt; to push your local changes to your partner’s GitHub repo
+1. Use &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;cd&lt;/span&gt; to navigate back to your own repo
+1. Use &lt;span style="font: Courier; color: #66C2A5; background: #282A22"&gt;git pull&lt;/span&gt; to sync in your partner’s changes
 
 ]
 
+
+---
+class: left, top, inverse 
+
+# Where to go next?
+
+.left-column[
+![From giphy.com](https://media.giphy.com/media/zuj3kcjbGj9qE/giphy.gif)
+
+See the References and Resources slide for suggestions on where to go next.
+]
+
+.right-column[
+Git and Github are powerful tools with numerous features. We have only scraped the surface, focussing on the simplest elements of an individual workflow but the real benefits come with collaboration.
+
+*** 
+
+Collaborating effectively requires additional steps that haven't been covered in these intro slides:
+
+**branching** | spawn a new branch to develop new features
+
+**merging** | combine separate branches back together
+
+**pull requests** | request your feature branch to be integrated into the code base
+
+]
 
 ---
 class: left, top 
 
 # References and resources
 
-1. Jennifer Bryan (2018) [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.1080/00031305.2017.1399928), The American Statistician, 72:1, 20-27, DOI: 10.1080/00031305.2017.1399928
+**High level (convince yourself and your team)**
 
-1. [Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jennifer Bryan
+* Jennifer Bryan (2018) [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.1080/00031305.2017.1399928), The American Statistician, 72:1, 20-27
 
-1. Chacon, S., &amp; Straub, B. (2014). Pro git Springer Nature. (available [online]((https://git-scm.com/book/en/v2))
+* Kieran Healy (2019) [The Plain Person’s Guide to Plain Text Social Science](https://plain-text.co/index.html#introduction)
 
-1. [GitHub docs](https://docs.github.com/en)
+**Software focus**
+
+* [Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jennifer Bryan
+
+* [Using built-in Git operations in SAS](https://blogs.sas.com/content/sasdummy/2019/01/17/git-in-sas/) SAS blogpost
+
+* [Stata and GitHub Integration](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a) A medium.com blogpost by Asjad Naqvi
+
+**Comprehensive references**
+
+* [Atlassian tutorials](https://www.atlassian.com/git/tutorials/what-is-version-control) (These are excellent but focus on git+Bitbucket rather than git+GitHub)
+
+* Chacon, S., &amp; Straub, B. (2014). Pro git Springer Nature. (available [online]((https://git-scm.com/book/en/v2))
+
+* [GitHub docs](https://docs.github.com/en)
 
 ---
 class: left, middle, inverse
 
 # Thank you for taking part! 🙏
 
-If this was useful for you, or if you have any questions or suggestions, please let me know at [m.hanly@unsw.edu.au](mailto:m.hanly@unsw.edu.au) 😄
+If this was useful for you, or if you have any questions or suggestions, please let me know at [m.hanly@unsw.edu.au](mailto:m.hanly@unsw.edu.au) 🙂
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan) and hosted on [**netlify**](https://www.netlify.com/).
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan) and hosted on [**netlify**](https://www.netlify.com/). Thank you to **Dr Malcolm Gillies** for input on these slides 🚀
 
-Feel free to share these slides, the url is [getting-started-with-git-and-github.netlify.app](https://getting-started-with-git-and-github.netlify.app).
+Feel free to share, the url is [getting-started-with-git-and-github.netlify.app](https://getting-started-with-git-and-github.netlify.app).
 
 The source code for these slides is available at [github.com/MarkHanly/getting-started-with-git-and-github](https://github.com/MarkHanly/getting-started-with-git-and-github). Issues can be added [here](https://github.com/MarkHanly/getting-started-with-git-and-github/issues).
 
