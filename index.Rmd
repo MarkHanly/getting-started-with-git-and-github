@@ -5,6 +5,7 @@ institute: "UNSW"
 date: "2019/03/07 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
+    css: ["default", "custom.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -80,11 +81,6 @@ But if the project is **large**, involves **many people** or goes on for a **lon
 
 
 ---
-class: center, middle, inverse
-
-# The new school solution
-
----
 class: left, top
 
 # `r emo::ji("rocket")` The new school solution
@@ -97,14 +93,17 @@ There are a few options out there but by far the most popular choice is the comb
 
 .pull-left[
 
-![](https://git-scm.com/images/logos/2color-lightbg@2x.png)
+![](images/git-logo.png)
+
+<a class = figLab href="https://git-scm.com/">Via git-scm.com</a>
 
 Git is software for tracking different versions of code files you are working on **locally**. 
 ]
 
 .pull-right[
 
-![](https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo-700x394.png)
+![](images/github-logo.png)
+<a class = figLab href="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo-700x394.png/">Via logos-world.net</a>
 
 Git Hub is a **cloud-based** platform for sharing and collaborating on projects managed with Git
 ]
@@ -153,7 +152,9 @@ class: middle, center, inverse
 
 # It seems a bit complicated
 
-![via giphy.com](https://media.giphy.com/media/kaq6GnxDlJaBq/giphy.gif)
+![](https://media.giphy.com/media/kaq6GnxDlJaBq/giphy.gif)
+
+<a class = figLab href="https://giphy.com/gifs/chloe-concerned-kaq6GnxDlJaBq/">Via GIPHY</a>
 
 _Is it worth it?_
 
@@ -248,8 +249,9 @@ class: middle, center, inverse
 
 # Are you in!?
 
-![via giphy.com](https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif)
+![](https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif)
 
+<a class = figLab href="https://giphy.com/gifs/retro-thumbs-up-XreQmk7ETCak0/">Via GIPHY</a>
 
 
 ---
@@ -286,7 +288,9 @@ To use Git on your computer you need a _Git Client_. There are [heaps](https://g
 
 .pull-right[
 
-![From https://gitforwindows.org/](https://gitforwindows.org/img/gw1.png)
+![](images/git-bash.png)
+
+<a class = figLab href="https://gitforwindows.org/img/gw1.png/">Via gitforwindows.org</a>
 
 ]
 
@@ -310,8 +314,6 @@ To use Git on your computer you need a _Git Client_. There are [heaps](https://g
 ]
 
 .pull-right[
-
-
 
 ![](images/rstudio-pane.png)
 
@@ -340,7 +342,9 @@ To use Git on your computer you need a _Git Client_. There are [heaps](https://g
 
 .pull-right[
 
-![From documnetation.sas.com](https://documentation.sas.com/api/docsets/egug/8.2/content/images/git_repositorytab.png)
+![](images/sas-interface.png)
+
+<a class = figLab href="https://documentation.sas.com/api/docsets/egug/8.2/content/images/git_repositorytab.png">Via documentation.sas.com</a>
 
 ]
 
@@ -391,7 +395,8 @@ Probably the most popular hosting service so there are lots of tutorials and res
 
 .right-column[
 
-![](https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png)
+![](images/github-logo.png)
+<a class = figLab href="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo-700x394.png/">Via logos-world.net</a>
 
 ]
 
@@ -413,7 +418,9 @@ A light-weight easy to install option. Implemented in ERICA.
 
 .right-column[
 
-![](https://www.vectorlogo.zone/logos/giteaio/giteaio-ar21.png)
+![](images/gitea-logo.png)
+
+<a class = figLab href="https://www.vectorlogo.zone/logos/giteaio/giteaio-ar21.png/">Via vectorlogo.zone</a>
 
 ]
 
@@ -435,8 +442,9 @@ Can be hosted on private server so ideal for sensitive projects. Implemented in 
 
 .right-column[
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/GitLab_logo.svg/1024px-GitLab_logo.svg.png)
+![](images/gitlab-logo.png)
 
+<a class = figLab href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/GitLab_logo.svg/1024px-GitLab_logo.svg.png/">Via wikimedia.org</a>
 ]
 
 
@@ -572,6 +580,8 @@ class: left, top
 
 ### What files can I track? 
 
+***
+
 --
 
 This all works best for non-binary or text files e.g. your typical code files (.sas, .do, .R, .Rmd, .py) but also .png, .csv etc
@@ -585,6 +595,8 @@ class: left, top
 # Frequently asked questions 
 
 ### How often should I commit? 
+
+***
 
 --
 
@@ -601,6 +613,8 @@ class: left, top
 # Frequently asked questions 
 
 ### What's with the staging area? 
+
+***
 
 --
 
@@ -620,6 +634,8 @@ class: left, top
 
 ### What about my sensitive data/code? 
 
+***
+
 --
 
 If your data are sensitive be very careful not to track with Git (more tips on this later). 
@@ -632,6 +648,8 @@ class: left, top
 # Frequently asked questions 
 
 ### How does my repo align with my project folder?
+
+***
 
 --
 
@@ -648,8 +666,9 @@ class: center, middle
 
 # Any other questions? 
 
-![](https://media4.giphy.com/media/3oxRmsoHngzymwDl2E/giphy.gif?cid=790b7611f45362f04723bb7e24e142fc9f8342e1cc63a978&rid=giphy.gif&ct=g)
+![](https://media3.giphy.com/media/3oxRmsoHngzymwDl2E/giphy.gif?cid=790b7611f2d9999351ebb3de3038b66f36d4553021440699&rid=giphy.gif&ct=g)
 
+<a class = figLab href="https://giphy.com/gifs/animation-flower-2d-3oxRmsoHngzymwDl2E">Via GIPHY</a>
 
 ---
 class: center, middle, inverse
@@ -676,15 +695,13 @@ Create a new folder and empty text file using GitBash (Windows) or Terminal (Mac
 
 1. Open GitBash/Terminal
 
-1. Use the `cd` command to navigate to the location you want to create your new folder
+1. Use the <span class=myCode>cd</span> command (change directory) to navigate to the location you want to create your new folder. If you're not sure where you are pointing <span class=myCode>pwd</span> (print working directory) and <span class=myCode>ls</span> (list) are useful. 
 
-1. Use the `mkdir` command to create a new folder named GitDemo. Enter <span style="font: Courier; color: #66C2A5; background: #282A22"> mkdir GitDemo</span>
+1. Use the `mkdir` command to create a new folder named GitDemo. Enter <span class=myCode>mkdir GitDemo</span>
 
-1. Use the `cd` command again to change directory to the new folder. Enter <span style="font: Courier; color: #66C2A5; background: #282A22"> cd GitDemo</span>
+1. Use the `cd` command again to change directory to the new folder. Enter <span class=myCode> cd GitDemo</span>
 
-1. Use the `touch` command to create a new text file named method.txt. Enter <span style="font: Courier; color: #66C2A5; background: #282A22"> touch method.txt</span>
-
-1. Practice the commands `ls` (list) and `pwd` (print working directory)
+1. Use the `touch` command to create a new text file named method.txt. Enter <span class=myCode> touch method.txt</span>
 
 ]
 
@@ -706,12 +723,12 @@ Configure Git with your username and email
 
 Using GitBash or Terminal, configure Git with your username and email by entering the commands below:
 
-1. <span style="font: Courier; color: #66C2A5; background: #282A22">git config --global user.name "John Doe”</span>
+1. <span class=myCode>git config --global user.name "John Doe”</span>
 
-1. <span style="font: Courier; color: #66C2A5; background: #282A22">git config --global user.email johndoe@example.com
+1. <span class=myCode>git config --global user.email johndoe@example.com
 </span>
 
-To check it has worked you can enter <span style="font: Courier; color: #66C2A5; background: #282A22">git config --list
+To check it has worked you can enter <span class=myCode>git config --list
 </span> and you should see your user name and email listed among your configuration settings. 
 
 ]
@@ -732,21 +749,21 @@ Initialise a git repo then add and commit changes to your file
 
 .right-column[
 
-1. Make sure you are in your new folder: <span style="font: Courier; color: #66C2A5; background: #282A22">cd GitDemo</span>
+1. Make sure you are in your new folder: <span class=myCode>cd GitDemo</span>
 
-1. Initialise a git repo: <span style="font: Courier; color: #66C2A5; background: #282A22">git init</span>
+1. Initialise a git repo: <span class=myCode>git init</span>
 
-1. Check the status of your repo: <span style="font: Courier; color: #66C2A5; background: #282A22">git status</span> (You should see that method.txt is untracked)
+1. Check the status of your repo: <span class=myCode>git status</span> (You should see that method.txt is untracked)
 
 1. Open method.txt with your preferred text editor & write a short list or recipe. After each item:
 
     1. Save the file as you usually would
 
-    1. Stage the file: <span style="font: Courier; color: #66C2A5; background: #282A22">git add -A</span>
+    1. Stage the file: <span class=myCode>git add -A</span>
 
-    1. Commit the file: <span style="font: Courier; color: #66C2A5; background: #282A22">git commit -m “your message here”</span>
+    1. Commit the file: <span class=myCode>git commit -m “your message here”</span>
 
-1. Enter <span style="font: Courier; color: #66C2A5; background: #282A22">git log</span> to view a log of your changes
+1. Enter <span class=myCode>git log</span> to view a log of your changes
 
 ]
 
@@ -821,7 +838,7 @@ Pair up and complete these in tandem with your partner.
 1. Using GitBash/Terminal, use `cd` to navigate to a location you want to clone your partners repo (This will create a local copy of their repo. Don’t clone it into your own repo!)
 
 1. Enter `git clone <your partners url>` to clone their repo: for example:
-	<span style="font: Courier; color: #66C2A5; background: #282A22">git clone https://github.com/MarkHanly/GitPrax.git</span>
+	<span class=myCode>git clone https://github.com/MarkHanly/GitPrax.git</span>
 
 ]
 
@@ -845,12 +862,12 @@ Pair up and complete these in tandem with your partner.
 
 1. Open your partner’s methods.txt file using your preferred text editor
 1. Edit their list and save the file
-1. Use <span style="font: Courier; color: #66C2A5; background: #282A22">cd</span> to navigate inside your locally cloned copy of your partner’s repo
-1. Use <span style="font: Courier; color: #66C2A5; background: #282A22">git status</span> to confirm you have edited the file
-1. Use <span style="font: Courier; color: #66C2A5; background: #282A22">git add -A</span> and <span style="font: Courier; color: #66C2A5; background: #282A22">git commit -m “message”</span> as before to add and commit changes
-1. Use <span style="font: Courier; color: #66C2A5; background: #282A22">git push</span> to push your local changes to your partner’s GitHub repo
-1. Use <span style="font: Courier; color: #66C2A5; background: #282A22">cd</span> to navigate back to your own repo
-1. Use <span style="font: Courier; color: #66C2A5; background: #282A22">git pull</span> to sync in your partner’s changes
+1. Use <span class=myCode>cd</span> to navigate inside your locally cloned copy of your partner’s repo
+1. Use <span class=myCode>git status</span> to confirm you have edited the file
+1. Use <span class=myCode>git add -A</span> and <span class=myCode>git commit -m “message”</span> as before to add and commit changes
+1. Use <span class=myCode>git push</span> to push your local changes to your partner’s GitHub repo
+1. Use <span class=myCode>cd</span> to navigate back to your own repo
+1. Use <span class=myCode>git pull</span> to sync in your partner’s changes
 
 ]
 
@@ -861,7 +878,9 @@ class: left, top, inverse
 # Where to go next?
 
 .left-column[
-![From giphy.com](https://media.giphy.com/media/zuj3kcjbGj9qE/giphy.gif)
+![](https://media.giphy.com/media/zuj3kcjbGj9qE/giphy.gif)
+
+<a class = figLab href="https://giphy.com/gifs/xpost-river-salmon-zuj3kcjbGj9qE?utm_source=media-link&utm_medium=landing&utm_campaign=Media%20Links&utm_term=">Via GIPHY</a>
 
 See the References and Resources slide for suggestions on where to go next.
 ]

@@ -1,0 +1,14 @@
+.figLab {
+  font-size: 0.5em;
+  color: grey;
+}
+
+.myCode{
+  font: Courier; 
+  color: #66C2A5; 
+  background: #282A22
+}
+
+a:hover {
+  color: #FA2B7D;
+}
