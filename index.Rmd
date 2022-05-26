@@ -38,6 +38,8 @@ Organising these files is an important, albeit often unglamorous, part of our jo
 
 --
 
+*** 
+
 **Managing versions** What do you do with old code? 
 
 **Ensuring reproducibility** Can others reproduce your results? What about your future self? 
@@ -73,6 +75,7 @@ The old school solution combines many practical strategies:
 
 --
 
+*** 
 This is ok(ish) for one person working on a small, brief project.
 
 But if the project is **large**, involves **many people** or goes on for a **long time** this approach very quickly breaks down `r emo::ji("worried")`
@@ -412,7 +415,9 @@ To enable collaboration you need a _Git Hosting service_. There are heaps of [op
 
 ### Gitea 
 
-A light-weight easy to install option. Implemented in ERICA. 
+A light-weight easy to install option.
+
+Implemented in ERICA. 
 
 ]
 
@@ -436,7 +441,9 @@ To enable collaboration you need a _Git Hosting service_. There are heaps of [op
 
 ### GitLab
 
-Can be hosted on private server so ideal for sensitive projects. Implemented in SURE. 
+Can be hosted on private server so ideal for sensitive projects.
+
+Implemented in SURE. 
 
 ]
 
@@ -482,30 +489,6 @@ Once you initialise a git repo in a folder, git is ready to start tracking chang
 ---
 class: left, top
 
-# Key concept: Diff 
-
-.pull-left[
-
-![](images/commit-example.png)
-
-]
-
-.pull-right[
-
-### Diff
-
-* A diff is the set of changes between two versions of a file 
-
-* When you commit, it is the _diff_ that gets recorded, not the whole version
-
-* The screenshot highlights a single diff: deletion of the word "clinic" 
-
-]
-
-
----
-class: left, top
-
 # Key concept: Commit 
 
 .pull-left[
@@ -525,6 +508,30 @@ class: left, top
 * Why you commit you must write a message explaining what changed
 
 * Committing is a two stage process - more on this later
+
+]
+
+
+---
+class: left, top
+
+# Key concept: Diff 
+
+.pull-left[
+
+![](images/commit-example.png)
+
+]
+
+.pull-right[
+
+### Diff
+
+* A diff is the set of changes between two versions of a file 
+
+* When you commit, it is the _diff_ that gets recorded, not the whole version
+
+* The screenshot highlights a single diff: deletion of the word "clinic" 
 
 ]
 
@@ -675,6 +682,79 @@ class: center, middle, inverse
 
 # Exercises
 
+
+---
+class: left, top, inverse 
+
+.left-column[
+
+<br>
+
+![](https://media0.giphy.com/media/RiZo1rFLXSP0cPtEd2/giphy.gif)
+
+<a class = figLab href="https://giphy.com/gifs/text-motivational-inchworm-RiZo1rFLXSP0cPtEd2">Via GIPHY</a>
+
+<br>
+
+Good luck! `r emo::ji("shamrock")`
+
+]
+
+.right-column[
+
+#### Overview of exercises
+
+* Exercise 1 - 3: Working locally with Git `r emo::ji("car")`
+
+* Exercise 4: Configuring GitHub + Git `r emo::ji("airplane")`
+
+* Exercise 5 - 7: Working with Git and GitHub `r emo::ji("rocket")`
+
+***
+
+
+#### Tips for Success
+
+* You will be entering commands into Git Bash or the Terminal. **Enter the commands carefully!** **A** versus **a** or **-** versus **--** will make a difference! 
+
+* **Pay attention to any messages** git returns. They're often incomprehensible but will flag if something has gone wrong. 
+
+* Use <span class=myCode>git status</span> often to confirm the current state of your repo. 
+
+* You can use tab in Git Bash/Terminal to auto-complete file and folder names
+
+* `ctrl+V` doesn't work to paste into Git Bash, use `insert` or `Right Click -> Edit -> Paste`
+
+]
+
+---
+class: left, top
+
+### Useful shell commands
+
+```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+tabl <- "
+| Command       | Action           |
+|-              |:--               |
+| cd            | Change directory (e.g. cd ‘H:/My Documents’) |
+| pwd           | Print working directory      |
+| ls | List files      | 
+| mkdir         | Create a new directory (e.g. ‘mkdir NewProject’) |
+| touch         | Create a new file (e.g. ‘touch mynewlist.txt’)      |
+| ..            | Refers to the folder up one level (e.g. ‘cd ..’) | 
+| git init      | Initialise a new git repository |
+| git status    | Check the status of a Git repository |
+| git add       | Add a specific file to the staging area (e.g. ‘git add code.sas’)      | 
+| git add -A    | Add all files with changes to the staging area |
+| git commit -m “msg”     | Commit files in the staging area  |
+| git pull      | Download changes from a remote repository      | 
+| git push      | Upload local commits to a remote repository |
+| git clone     | Copy an existing repo from GitHub etc      |
+"
+
+cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
+```
+
 ---
 class: left, top
 
@@ -739,7 +819,7 @@ class: left, top
 
 # Exercise 3 of 7 `r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")`
 
-### Configure git
+### Practice local git workflow
 
 .left-column[
 
@@ -824,21 +904,20 @@ class: left, top
 .left-column[
 
 ### Task 
-Go to partners GitHub repo, copy URL, then clone
+Clone a GitHub repo to your local computer
 ]
 
 .right-column[
 
-Pair up and complete these in tandem with your partner.
+1. Go to https://github.com/MarkHanly/getting-started-practice
 
-1. Add your partner as a collaborator in your new GitHub repo (Settings > Manage Access > Invite a collaborator)
+1. Click on the green <span style="background:#2da44e; color:white; border: 1px solid; border-radius: 6px;">Code</span> button and copy the HTTPS url to your clipboard.
 
-1. Go to your partner’s GitHub repo and click on the clone link to get the HTTP url
+1. Using GitBash/Terminal, use `cd` to navigate to a location you want to clone this practice repo. **Don’t clone it into the repo you created earlier!**
 
-1. Using GitBash/Terminal, use `cd` to navigate to a location you want to clone your partners repo (This will create a local copy of their repo. Don’t clone it into your own repo!)
+1. Enter <span class=myCode>git clone https://github.com/MarkHanly/getting-started-practice.git`</span> to clone the practice repo locally (this is the url you've just copied so you can paste it in)
 
-1. Enter `git clone <your partners url>` to clone their repo: for example:
-	<span class=myCode>git clone https://github.com/MarkHanly/GitPrax.git</span>
+You should now be able to see the repo files copied locally.
 
 ]
 
@@ -848,27 +927,25 @@ class: left, top
 
 # Exercise 7 of 7 `r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")`
 
-### Collaborate
+### Make changes and push back to GitHub
 
 .left-column[
 
 ### Task 
-Make changes to your partners file and push. Pull your partners changes
+Add a new file to the practice repo and push
 ]
 
 .right-column[
 
-Pair up and complete these in tandem with your partner.
-
-1. Open your partner’s methods.txt file using your preferred text editor
-1. Edit their list and save the file
-1. Use <span class=myCode>cd</span> to navigate inside your locally cloned copy of your partner’s repo
-1. Use <span class=myCode>git status</span> to confirm you have edited the file
+1. Navigate to the newly cloned repo: <span class=myCode>cd getting-started-practice</span>
+1. Create a new branch (name the branch with your name so that it is unique): <span class=myCode>git checkout -b mhanly-branch</span>
+1. Add a new .txt file (name the file with your name so that it is unique): <span class=myCode>touch mhanly-edits.txt</span>
+1. Open the new .txt file in the usual way, write a line or two and click save. 
+1. Confirm you have edited the file: <span class=myCode>git status</span>
 1. Use <span class=myCode>git add -A</span> and <span class=myCode>git commit -m “message”</span> as before to add and commit changes
-1. Use <span class=myCode>git push</span> to push your local changes to your partner’s GitHub repo
-1. Use <span class=myCode>cd</span> to navigate back to your own repo
-1. Use <span class=myCode>git pull</span> to sync in your partner’s changes
+1. Push your local changes to the GitHub repo <span class=myCode>git push --set-upstream origin mhanly-branch</span>
 
+If you managed to complete those steps you should now see your branch listed under https://github.com/MarkHanly/getting-started-practice/branches 
 ]
 
 

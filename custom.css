@@ -6,7 +6,9 @@
 .myCode{
   font: Courier; 
   color: #66C2A5; 
-  background: #282A22
+  background: #282A22;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 a:hover {
