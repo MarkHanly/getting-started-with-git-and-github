@@ -14,7 +14,7 @@ class: center, middle, inverse, title-slide
 # Getting started with Git and GitHub
 ### Mark Hanly
 ### UNSW
-### 2019/03/07 (updated: 2022-05-26)
+### 2019/03/07 (updated: 2022-05-27)
 
 ---
 
@@ -750,15 +750,17 @@ Good luck! ☘️
 
 * **Pay attention to any messages** git returns. They're often incomprehensible but should flag if something has gone wrong 
 
+* You can launch Git Bash/Terminal from your file browser by clicking on a folder and selecting **Git Bash Here** (in windows) or **New Terminal at Folder** (in macOS)
+
 * Use &lt;span class=myCode&gt;git status&lt;/span&gt; often to confirm the current state of your repo 
 
-* ↹ Use `tab` in Git Bash/Terminal to auto-complete file and folder names
+* ↹ Use **tab** in Git Bash/Terminal to auto-complete file and folder names
 
 * &amp;uarr; Use the up arrow in Git Bash/Terminal to retrieve the last command you entered 
 
 * &amp;larr; &amp;rarr; Use the left and right arrows to position your cursor in Git Bash/Terminal (e.g.if you want to edit a typo in a command)
 
-* `ctrl+V` doesn't work to paste into Git Bash, use `insert` or `Right Click -&gt; Edit -&gt; Paste` 
+* `ctrl+V` doesn't work to paste into Git Bash, use **insert** or **Right Click -&gt; Edit -&gt; Paste** 
 
 
 ]
@@ -817,7 +819,7 @@ Ctrl+V doesn’t work in GitBash, right-click and choose paste instead.
 
 1. Use the `touch` command to create a new text file named method.txt. Enter &lt;span class=myCode&gt; touch method.txt&lt;/span&gt;
 
-Can you see the new folder and file on your computer? 🥳
+Can you see the new folder and file on your computer? 🎉
 ]
 
 
@@ -849,7 +851,7 @@ Using GitBash or Terminal, configure Git with your username and email by enterin
 To check it has worked you can enter &lt;span class=myCode&gt;git config --list
 &lt;/span&gt;.
 
-Do you see your user name and email listed among your configuration settings? 🎈 
+Do you see your user name and email listed among your configuration settings? 🎉 
 
 ]
 
@@ -886,33 +888,13 @@ We want to emulating writing real code so make sure to do the edit &amp;rarr; sa
 
 1. Enter &lt;span class=myCode&gt;git log&lt;/span&gt; to view a log of your changes
 
-Do you see a list of the commit messages you entered? 🥳
+Do you see a list of the commit messages you entered? 🎉
 ]
 
 ---
 class: left, top
 
-# Exercise 4 of 7 ✈️
-
-#### Create a personal access token (PAT) on GitHub and use it to authenticate your account.
-
-.left-column[
-
-#### Tips 
-
-
-]
-
-.right-column[
-
-Follow steps 1-9 on **Creating a personal access token** here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-
-]
-
----
-class: left, top
-
-# Exercise 5 of 7 🚀
+# Exercise 4 of 7 🚀
 
 #### Task: Create an empty repo on GitHub and push your local repo to this empty GitHub repo 
 
@@ -926,7 +908,7 @@ Remember, ctrl+c and ctrl+v wont work in the shell. You can use `insert` or righ
 
 .right-column[
 
-1. Log in at github.com and craete a new public repo (use + button in top right-hand corner)
+1. Log in at github.com and create a new public repo (use + button in top right-hand corner)
 
 1. Give the GitHub repo the same name as your project folder.
 
@@ -936,14 +918,14 @@ Remember, ctrl+c and ctrl+v wont work in the shell. You can use `insert` or righ
 
 1. When you create the blank repo, three options will appear. Follow the instructions labelled **to push an existing repository from the command line**. Copy and run the three lines of code one-by-one into Git Bash/Terminal.  
 
-Refresh the GitHub tab. Can you see your method.txt file history? 🎉
+Refresh the GitHub tab. Can you see your method.txt file history? 🎈
 
 ]
 
 ---
 class: left, top
 
-# Exercise 6 of 7 🚀
+# Exercise 5 of 7 🚀
 
 #### Task: Clone an existing GitHub repo to your local computer
 
@@ -962,13 +944,13 @@ If you clone the new repo here then `GitDemo` and `getting-started-practice` wil
 
 1. Go to https://github.com/MarkHanly/getting-started-practice
 
-1. Click on the &lt;span style="background:#2da44e; color:white; border: 1px solid; border-radius: 6px;"&gt;Code&lt;/span&gt; button and copy the HTTPS url to your clipboard.
+1. Click on the &lt;span class="myButton"&gt;Code&lt;/span&gt; button and copy the HTTPS url to your clipboard.
 
 1. Using GitBash/Terminal, use `cd` to navigate to a location you want to clone this practice repo. **Don’t clone it into the repo you created earlier!**
 
 1. Enter &lt;span class=myCode&gt;git clone https://github.com/MarkHanly/getting-started-practice.git&lt;/span&gt; to clone the practice repo locally (this is the url you've just copied so you can paste it in)
 
-Can you see the `getting-started-practice` folder copied locally? 🎂
+Can you see the `getting-started-practice` folder copied locally? 🎈
 
 ]
 
@@ -976,9 +958,9 @@ Can you see the `getting-started-practice` folder copied locally? 🎂
 ---
 class: left, top
 
-# Exercise 7 of 7 🌔
+# Exercise 6 of 7 🚀
 
-#### Task: Create a new branch, add a new file and submit your changes as a pull request
+#### Task: Create a new branch, add a new file and push your branch to GitHub
 
 .left-column[
 
@@ -1000,9 +982,38 @@ For the `push` to work you need to be added as a collaborator on the GitHub repo
 1. Use &lt;span class=myCode&gt;git add -A&lt;/span&gt; and &lt;span class=myCode&gt;git commit -m “message”&lt;/span&gt; as before to add and commit changes
 1. Push your local changes to the GitHub repo &lt;span class=myCode&gt;git push --set-upstream origin _yourname_-branch&lt;/span&gt;
 
-Can you see your branch listed under https://github.com/MarkHanly/getting-started-practice/branches ? 🥳 
+Can you see your branch listed under https://github.com/MarkHanly/getting-started-practice/branches ? 🎂 
 ]
 
+
+---
+class: left, top
+
+# Exercise 7 of 7 🌔
+
+#### Task: Submit a pull request to merge your branch into the main branch on GitHub
+
+.left-column[
+
+#### Tips
+To merge a branch on GitHub we submit a "pull request". This is different to `git pull` which pulls a remote repo to a local repo. 
+
+ 
+]
+
+.right-column[
+
+1. Go to https://github.com/MarkHanly/getting-started-practice/branches
+
+1. You should see you branch listed under active branches. Click &lt;span class="myButton"&gt;New pull request&lt;/span&gt;. 
+
+1. Click &lt;span class="myButton"&gt;Create pull request&lt;/span&gt; 
+
+1. You should see a note to say "This branch has no conflicts with the base branch". Click &lt;span class="myButton"&gt;Merge pull request&lt;/span&gt; and then &lt;span class="myButton"&gt;Confirm merge&lt;/span&gt;. 
+
+Can you see your file listed under the main branch at https://github.com/MarkHanly/getting-started-practice? 🥳
+
+]
 
 ---
 class: left, top, inverse 
