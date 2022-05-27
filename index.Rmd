@@ -712,18 +712,51 @@ Good luck! `r emo::ji("shamrock")`
 
 ***
 
+#### Notes on exercises
+
+* These are not hard but can be... _fiddly_. Don't panic if you get lost. You can always watch the demo and come back to it afterwards.  
+
+* At this stage, if something goes wrong it can be easiest to close the shell and start again. 
+
+]
+
+
+---
+class: left, top, inverse 
+
+.left-column[
+
+<br>
+
+![](https://media0.giphy.com/media/RiZo1rFLXSP0cPtEd2/giphy.gif)
+
+<a class = figLab href="https://giphy.com/gifs/text-motivational-inchworm-RiZo1rFLXSP0cPtEd2">Via GIPHY</a>
+
+<br>
+
+Good luck! `r emo::ji("shamrock")`
+
+]
+
+.right-column[
+
 
 #### Tips for Success
 
-* You will be entering commands into Git Bash or the Terminal. **Enter the commands carefully!** **A** versus **a** or **-** versus **--** will make a difference! 
+* **Enter the commands carefully!** **A** versus **a** or **-** versus **--** will make a difference! 
 
-* **Pay attention to any messages** git returns. They're often incomprehensible but will flag if something has gone wrong. 
+* **Pay attention to any messages** git returns. They're often incomprehensible but should flag if something has gone wrong 
 
-* Use <span class=myCode>git status</span> often to confirm the current state of your repo. 
+* Use <span class=myCode>git status</span> often to confirm the current state of your repo 
 
-* You can use tab in Git Bash/Terminal to auto-complete file and folder names
+* ↹ Use `tab` in Git Bash/Terminal to auto-complete file and folder names
 
-* `ctrl+V` doesn't work to paste into Git Bash, use `insert` or `Right Click -> Edit -> Paste`
+* &uarr; Use the up arrow in Git Bash/Terminal to retrieve the last command you entered 
+
+* &larr; &rarr; Use the left and right arrows to position your cursor in Git Bash/Terminal (e.g.if you want to edit a typo in a command)
+
+* `ctrl+V` doesn't work to paste into Git Bash, use `insert` or `Right Click -> Edit -> Paste` 
+
 
 ]
 
@@ -758,24 +791,27 @@ cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
 ---
 class: left, top
 
-# Exercise 1 of 7 `r emo::ji("weight")`
+# Exercise 1 of 7 `r emo::ji("car")`
 
-### Practice using the shell
+#### Task: Practice using shell commands to create a new folder and empty text file with GitBash (Windows) or Terminal (Mac)
 
 .left-column[
 
-### Task 
-Create a new folder and empty text file using GitBash (Windows) or Terminal (Mac)
+#### Tips
 
-**Note** Ctrl+V doesn’t work in GitBash, right-click instead. You may need to adjust the settings.
+Ctrl+V doesn’t work in GitBash, right-click and choose paste instead. 
+
+<span class=myCode>cd ~</span> is the home directory
+
+<span class=myCode>cd ..</span> moves you "up" one folder
 
 ]
 
 .right-column[
 
-1. Open GitBash/Terminal
+1. Open GitBash/Terminal. Type <span class=myCode>pwd</span> to confirm the current folder 
 
-1. Use the <span class=myCode>cd</span> command (change directory) to navigate to the location you want to create your new folder. If you're not sure where you are pointing <span class=myCode>pwd</span> (print working directory) and <span class=myCode>ls</span> (list) are useful. 
+1. Use the <span class=myCode>cd</span> command (change directory) to navigate to the location you want to create your new folder. e.g. <span class=myCode>cd ~/Documents</span>
 
 1. Use the `mkdir` command to create a new folder named GitDemo. Enter <span class=myCode>mkdir GitDemo</span>
 
@@ -783,20 +819,24 @@ Create a new folder and empty text file using GitBash (Windows) or Terminal (Mac
 
 1. Use the `touch` command to create a new text file named method.txt. Enter <span class=myCode> touch method.txt</span>
 
+Can you see the new folder and file on your computer? `r emo::ji("party")`
 ]
+
 
 
 ---
 class: left, top
 
-# Exercise 2 of 7 `r emo::ji("weight")``r emo::ji("weight")`
+# Exercise 2 of 7 `r emo::ji("car")`
 
-### Configure git
+#### Task: Configure Git with your username and email
 
 .left-column[
 
-### Task 
-Configure Git with your username and email
+#### Tips 
+
+In Git Bash and Terminal, use the up key &uarr; to bring up the last command you entered
+
 ]
 
 .right-column[
@@ -809,7 +849,9 @@ Using GitBash or Terminal, configure Git with your username and email by enterin
 </span>
 
 To check it has worked you can enter <span class=myCode>git config --list
-</span> and you should see your user name and email listed among your configuration settings. 
+</span>.
+
+Do you see your user name and email listed among your configuration settings? `r emo::ji("party")` 
 
 ]
 
@@ -817,14 +859,18 @@ To check it has worked you can enter <span class=myCode>git config --list
 ---
 class: left, top
 
-# Exercise 3 of 7 `r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")`
+# Exercise 3 of 7 `r emo::ji("car")`
 
-### Practice local git workflow
+#### Task: Initialise a git repo then add and commit changes to your text file
 
 .left-column[
 
-### Task 
-Initialise a git repo then add and commit changes to your file
+#### Tips
+
+Enter <span class=myCode>git status</span> after every step to check the current state of your repo!
+
+We want to emulating writing real code so make sure to do the edit &rarr; save &rarr; add &rarr; commit cycle a few times
+
 ]
 
 .right-column[
@@ -833,31 +879,30 @@ Initialise a git repo then add and commit changes to your file
 
 1. Initialise a git repo: <span class=myCode>git init</span>
 
-1. Check the status of your repo: <span class=myCode>git status</span> (You should see that method.txt is untracked)
+1. Check the status of your repo: <span class=myCode>git status</span>
 
-1. Open method.txt with your preferred text editor & write a short list or recipe. After each item:
-
-    1. Save the file as you usually would
+1. Open method.txt with your preferred text editor & write a short list or recipe. Save after adding each item click save and then:
 
     1. Stage the file: <span class=myCode>git add -A</span>
-
     1. Commit the file: <span class=myCode>git commit -m “your message here”</span>
 
 1. Enter <span class=myCode>git log</span> to view a log of your changes
 
+Do you see a list of the commit messages you entered? `r emo::ji("party")`
 ]
 
 ---
 class: left, top
 
-# Exercise 4 of 7 `r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")`
+# Exercise 4 of 7 `r emo::ji("airplane")`
 
-### Sync Git and GitHub
+#### Create a personal access token (PAT) on GitHub and use it to authenticate your account.
 
 .left-column[
 
-### Task 
-Create a personal access token (PAT) on GitHub and use it to authenticate your account. 
+#### Tips 
+
+
 ]
 
 .right-column[
@@ -869,55 +914,63 @@ Follow steps 1-9 on **Creating a personal access token** here: https://docs.gith
 ---
 class: left, top
 
-# Exercise 5 of 7 `r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")`
+# Exercise 5 of 7 `r emo::ji("rocket")`
 
-### Host your repo on GitHub
+#### Task: Create an empty repo on GitHub and push your local repo to this empty GitHub repo 
 
 .left-column[
 
-### Task 
-Push your local git repo to a GitHub repo
+#### Tips 
+
+Remember, ctrl+c and ctrl+v wont work in the shell. You can use `insert` or right-click and choose paste. 
+
 ]
 
 .right-column[
 
-1. Create a new public repo in GitHub (use + button in top right-hand corner)
+1. Log in at github.com and craete a new public repo (use + button in top right-hand corner)
 
-1. Name it something unique or give it the same name as your project folder.
+1. Give the GitHub repo the same name as your project folder.
 
-1. No need to initialize a README, add a .gitignore or license
+1. Ignore the options to initialize a README, add a .gitignore or license
 
 1. When you are ready select **Create Repository**
 
-1. Follow the instructions to push an existing repository from the command line (copy code into GitBash/Terminal)
-You should now be able to explore your history on GitHub
+1. When you create the blank repo, three options will appear. Follow the instructions labelled **to push an existing repository from the command line**. Copy and run the three lines of code one-by-one into Git Bash/Terminal.  
+
+Refresh the GitHub tab. Can you see your method.txt file history? `r emo::ji("party")`
 
 ]
 
 ---
 class: left, top
 
-# Exercise 6 of 7 `r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")`
+# Exercise 6 of 7 `r emo::ji("rocket")`
 
-### Clone a remote repo
+#### Task: Clone an existing GitHub repo to your local computer
 
 .left-column[
 
-### Task 
-Clone a GitHub repo to your local computer
+#### Tips 
+
+If your current working directory is GitDemo then 
+<span class=myCode>cd ..</span> will change your directory to the parent folder.
+
+If you clone the new repo here then `GitDemo` and `getting-started-practice` will be side-by-side
+
 ]
 
 .right-column[
 
 1. Go to https://github.com/MarkHanly/getting-started-practice
 
-1. Click on the green <span style="background:#2da44e; color:white; border: 1px solid; border-radius: 6px;">Code</span> button and copy the HTTPS url to your clipboard.
+1. Click on the <span style="background:#2da44e; color:white; border: 1px solid; border-radius: 6px;">Code</span> button and copy the HTTPS url to your clipboard.
 
 1. Using GitBash/Terminal, use `cd` to navigate to a location you want to clone this practice repo. **Don’t clone it into the repo you created earlier!**
 
-1. Enter <span class=myCode>git clone https://github.com/MarkHanly/getting-started-practice.git`</span> to clone the practice repo locally (this is the url you've just copied so you can paste it in)
+1. Enter <span class=myCode>git clone https://github.com/MarkHanly/getting-started-practice.git</span> to clone the practice repo locally (this is the url you've just copied so you can paste it in)
 
-You should now be able to see the repo files copied locally.
+Can you see the `getting-started-practice` folder copied locally? `r emo::ji("party")`
 
 ]
 
@@ -925,27 +978,31 @@ You should now be able to see the repo files copied locally.
 ---
 class: left, top
 
-# Exercise 7 of 7 `r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")``r emo::ji("weight")`
+# Exercise 7 of 7 `r emo::ji("moon")`
 
-### Make changes and push back to GitHub
+#### Task: Create a new branch, add a new file and submit your changes as a pull request
 
 .left-column[
 
-### Task 
-Add a new file to the practice repo and push
+#### Tips
+Replace `yourmame` with your actual name e.g. `mhanly`.
+
+For the `push` to work you need to be added as a collaborator on the GitHub repo. If you haven't already, send me your GitHub username!
+
+ 
 ]
 
 .right-column[
 
 1. Navigate to the newly cloned repo: <span class=myCode>cd getting-started-practice</span>
-1. Create a new branch (name the branch with your name so that it is unique): <span class=myCode>git checkout -b mhanly-branch</span>
-1. Add a new .txt file (name the file with your name so that it is unique): <span class=myCode>touch mhanly-edits.txt</span>
+1. Create a new branch (name the branch with your name so that it is unique): <span class=myCode>git checkout -b _yourname_-branch</span>
+1. Add a new .txt file (name the file with your name so that it is unique): <span class=myCode>touch _yourname_-edits.txt</span>
 1. Open the new .txt file in the usual way, write a line or two and click save. 
 1. Confirm you have edited the file: <span class=myCode>git status</span>
 1. Use <span class=myCode>git add -A</span> and <span class=myCode>git commit -m “message”</span> as before to add and commit changes
-1. Push your local changes to the GitHub repo <span class=myCode>git push --set-upstream origin mhanly-branch</span>
+1. Push your local changes to the GitHub repo <span class=myCode>git push --set-upstream origin _yourname_-branch</span>
 
-If you managed to complete those steps you should now see your branch listed under https://github.com/MarkHanly/getting-started-practice/branches 
+Can you see your branch listed under https://github.com/MarkHanly/getting-started-practice/branches ? `r emo::ji("party")` 
 ]
 
 
